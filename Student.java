@@ -1,42 +1,18 @@
-//Student Grading (Switch Statement) Create a Student class with name and marks. Write a method calculateGrade() that assigns a grade (A, B, C, D, F) based on marks using a switch or if-else ladder. Create 3 students and display their grades.
+//Simple Class with a Method Create a class Student with two attributes: name and age. Create a method displayInfo() that prints the student's name and age. In the main method, create a Student object and call displayInfo().
 
 public class Student {
-
     String name;
-    int marks;
-    public Student(String name, int marks) {
-        this.name = name;
-        this.marks = marks;
-    }
-    public void calculateGrade() {
-        char grade;
-        switch (marks / 10) {
-            case 10:  
-            case 9:
-                grade = 'A';
-                break;
-            case 8:   
-                grade = 'B';
-                break;
-            case 7:   
-                grade = 'C';
-                break;
-            case 6:   
-                grade = 'D';
-                break;
-            default:   
-                grade = 'F';
-                break;
-        }
-        System.out.println("Student: " + name + ", Marks: " + marks + ", Grade: " + grade);
+    int age;
+    void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
     }
     public static void main(String[] args) {
         
-        Student student1 = new Student("Sarala", 92);
-        Student student2 = new Student("Dipa", 75);
-        Student student3 = new Student("Ishani", 59);
-        student1.calculateGrade();
-        student2.calculateGrade();
-        student3.calculateGrade();
+        Student s1 = new Student();
+        s1.name = "Sarala";
+        s1.age = 20;
+
+        s1.displayInfo();
     }
 }
